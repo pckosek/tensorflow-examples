@@ -1,0 +1,2 @@
+model_checkpoint_path: "C:\\Users\\user\\work\\git\\tensorflow-examples\\dynamic_progression\\01_one_step_echo\\model.ckpt-25000"
+all_model_checkpoint_paths: "C:\\Users\\user\\work\\git\\tensorflow-examples\\dynamic_progression\\01_one_step_echo\\model.ckpt-25000"

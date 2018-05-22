@@ -1,0 +1,60 @@
+numSets = 10000;
+
+inputTimeSteps  = 4;
+outputTimeSteps = 4;
+
+inputVectorSize  = 1;
+outputVectorSize = 1;
+% split data into training and testing
+
+inputSequence_1  = [1 2 2 0]./10;
+outputSequence_1 = [1 2 2 4]./10;
+inputSequence_2  = [2 2 2 0]./10;
+outputSequence_2 = [2 2 2 1]./10;
+
+X = zeros(numSets, inputTimeSteps, inputVectorSize );
+Y = zeros(numSets, outputTimeSteps, outputVectorSize );
+
+for indx = 1:numSets
+    
+    if mod(indx,2)
+        inSeq  = inputSequence_1;
+        outSeq = outputSequence_1;
+    else
+        inSeq  = inputSequence_2;
+        outSeq = outputSequence_2;
+    end
+    
+    scaleFactor = 1 + rand(1);
+    this_x = scaleFactor * inSeq;
+    this_y = scaleFactor * outSeq;
+    
+    X(indx,:,:) = reshape( this_x, [1, inputTimeSteps, 1]);
+    Y(indx,:,:) = reshape( this_y, [1, outputTimeSteps, 1]);
+end
+
+splitR = 0.8;
+splitBelow = floor( numSets*splitR );
+
+% TRAINING DATA
+trainX = X( 1:splitBelow, :, : );
+trainY = Y( 1:splitBelow, :, : );
+
+% TESTING DATA
+testX = X( splitBelow+1:end, :, : );
+testY = Y( splitBelow+1:end, :, : );
+
+% n = 10;
+% trainX = zeros(n,2,1);
+% trainY = trainX;
+% 
+% for indx = 1:n
+%     
+%     trainX(indx,1,1) = indx/10;
+%     trainX(indx,2,1) = 0;
+%     trainY(indx,1,1) = 0;
+%     trainY(indx,2,1) = indx/10;
+% end
+% testX = trainX;
+% testY = trainY;
+% 

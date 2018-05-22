@@ -1,0 +1,2 @@
+model_checkpoint_path: "C:\\Users\\user\\work\\git\\tensorflow-examples\\dynamic_progression\\03a_long_reg_seq_dropcells\\model.ckpt-50898"
+all_model_checkpoint_paths: "C:\\Users\\user\\work\\git\\tensorflow-examples\\dynamic_progression\\03a_long_reg_seq_dropcells\\model.ckpt-50898"

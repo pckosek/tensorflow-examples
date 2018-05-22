@@ -1,0 +1,5 @@
+x_batch_inputs has shape: [1, 100, 2]
+y_batch_inputs has shape: [1, 100, 2]
+rnn/transpose_1 has shape: [1, 100, 20]
+Reshape_2 has shape: [100, 20]
+distributed__dense/Add has shape: [100, 2]

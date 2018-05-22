@@ -1,0 +1,2 @@
+model_checkpoint_path: "C:\\Users\\user\\work\\git\\tensorflow-examples\\10_matlab_interacction\\model.ckpt-350"
+all_model_checkpoint_paths: "C:\\Users\\user\\work\\git\\tensorflow-examples\\10_matlab_interacction\\model.ckpt-350"
