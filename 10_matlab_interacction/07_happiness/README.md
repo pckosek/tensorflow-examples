@@ -1,3 +1,3 @@
-This now has a second column of inputs and outputs.
+OK - this actually seems to work.
 
-daydream test
+This is the first time that I actually feel that that a dynamic rnn can daydream a floating point sequence.
